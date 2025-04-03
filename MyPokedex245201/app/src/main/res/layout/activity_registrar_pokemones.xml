@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context=".activity_registrar_pokemones">
+
+    <!-- Title with shadow effect -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Pokemon"
+        android:textAlignment="center"
+        android:fontFamily="@font/happy_beige"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:shadowColor="#CCCCCC"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Card container for form elements -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Number field with label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Número del Pokemon"
+                android:fontFamily="@font/happy_beige"
+                android:textStyle="bold"
+                android:textColor="#333333"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/etNumber"
+                android:inputType="number"
+                android:background="@drawable/edit_text_border"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:hint="Ej. 025"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Name field with label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del Pokemon"
+                android:fontFamily="@font/happy_beige"
+                android:textStyle="bold"
+                android:textColor="#333333"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/etName"
+                android:hint="Ej. Pikachu"
+                android:background="@drawable/edit_text_border"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="75dp"
+        app:cardElevation="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView"
+            android:scaleType="centerCrop"
+            android:background="#DDDDDD"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Button with Pokemon style -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar un pokemon"
+        android:fontFamily="@font/happy_beige"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:id="@+id/btnUploadImage"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/red"
+
+        android:paddingStart="10dp"
+        android:paddingEnd="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Guardar mi nuevo Pokemon"
+        android:layout_gravity="center"
+        android:fontFamily="@font/happy_beige"
+        android:id="@+id/btnSavePokemon"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/whiteE"
+        android:paddingStart="10dp"
+        android:paddingEnd="16dp"/>
+
+</LinearLayout>
